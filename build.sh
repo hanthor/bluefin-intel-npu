@@ -10,14 +10,26 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/39/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf install -y tmux 
+# dnf install -y  
 
 # Use a COPR Example:
 #
-# dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install package
+dnf5 -y copr enable xanderlent/intel-npu-driver
+dnf5 -y install intel-npu-level-zero 
 # Disable COPRs so they don't end up enabled on the final image:
-# dnf5 -y copr disable ublue-os/staging
+dnf5 -y copr disable xanderlent/intel-npu-driver
+
+
+### Install Intel NPU top
+
+# Clone the repository
+#git clone https://github.com/ZoLArk173/nputop.git
+
+# Navigate to the project directory
+#cd nputop
+#TODO: install Rust
+# Build and install with Cargo
+#cargo install --path ~/.local/bin/
 
 #### Example for enabling a System Unit File
 
