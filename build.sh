@@ -15,7 +15,7 @@ set -ouex pipefail
 # Use a COPR Example:
 #
 dnf5 -y copr enable xanderlent/intel-npu-driver
-dnf5 -y install intel-npu-level-zero 
+dnf5 -y install oneapi-level-zero
 # Disable COPRs so they don't end up enabled on the final image:
 dnf5 -y copr disable xanderlent/intel-npu-driver
 
